@@ -8,18 +8,21 @@ def menu():
           "2) Exit\n")
 
 def choice0(option):
+    x == True
     if option == '1':
         print('Your car breaks down in the middle of some dark spooky woods... also its raining. \n'
         'In the distance you see a house. \n'
         'would you like to approach the house?')
         print('1) Go to the house? \n'
               '2) Leave?')
+        x = False
 
     elif option == '2':
         exit(1)
+        x = False
     else:
         print("invalid input; try again.")
-        choice0(options)
+        choice0
 
 def choice1(option):
     if option == '1':
@@ -40,18 +43,24 @@ def choice1(option):
               '3) try and break down the front door \n')
     else:
         print('invalid input; try again.')
-        choice1(options)
+        choice1()
+
+x = True
 
 
 menu()
 
-options = input('input your choice: \n >')
+option0 = input('input your choice: \n >')
 
-choice0(options)
-options = input('input your choice: \n >')
 
-choice1(options)
-options = input('input your choice: \n >')
+while x == True:
+    choice0(option0)
+
+choice0(option0)
+option1 = input('input your choice: \n >')
+
+choice1(option1)
+option2 = input('input your choice: \n >')
 
 
 
