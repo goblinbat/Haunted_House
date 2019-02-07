@@ -8,7 +8,7 @@ def menu():
           "1) Play \n" +
           "2) Exit\n")
 
-def choice0():
+def carhouse(option):
     if option == '1':
         print('Your car breaks down in the middle of some dark spooky woods... also its raining. \n' +
         'In the distance you see a house. \n' +
@@ -18,12 +18,11 @@ def choice0():
     elif option == '2':
         exit(1)
     else:
-        print("invalid input; try again.")
-        choice0
+        print("invalid input")
 
 
-def choice1():
-    option0 = input('input your choice: \n >')
+def door(option):
+#    option = input('input your choice: \n >')
     if option == '1':
         print('Ignoring the fact this is the setup to a bad horror movie, you approach the house. \n')
         print('You are soaked to the bone by the time you reach the front door.\n' +
@@ -32,19 +31,24 @@ def choice1():
         print('1) try and open the cellar door \n' +
               '2) knock on the front door \n' +
               '3) try and break down the front door \n')
-    if option == '2':
+    elif option == '2':
         print("too bad, there's nowhere else to go.")
         print('You are soaked to the bone by the time you reach the front door.\n' +
               "Trying to open it and get out of the rain, you find it's locked.\n" +
               'Fortunately, you spot a cellar door off to the side. Try and open it? \n')
         print('1) try and open the cellar door \n' +
-              '2) knock on the front door \n'+
+              '2) knock on the front door \n' +
               '3) try and break down the front door \n')
     else:
-        print('invalid input; try again.')
+        print('invalid input')
 
-        choice1(option)
-
+def end(x):
+    x = input('input your choice: \n >')
+    if x == '1' or x == '2' or x == '3':
+        print("that's the end, thanks for playing")
+        exit(1)
+    else:
+        exit(1)
 
 
 
@@ -52,21 +56,14 @@ menu()
 
 option1 = input('input your choice: \n >')
 
-choice0(option1)
-
-choice1()
-option2
+carhouse(option1)
 
 option2 = input('input your choice: \n >')
+door(option2)
 
 
+end(x)
 
 
-
-#def choice1():
-#    print("intro description")
-
-# while True:
-#     os.system('cls||clear')
 
 
