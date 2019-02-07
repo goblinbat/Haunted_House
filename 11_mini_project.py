@@ -8,14 +8,13 @@ def menu():
           "1) Play \n" +
           "2) Exit\n")
 
-def choice0(option):
+def choice0():
     if option == '1':
         print('Your car breaks down in the middle of some dark spooky woods... also its raining. \n' +
         'In the distance you see a house. \n' +
         'would you like to approach the house?')
         print('1) Go to the house? \n'
               '2) Leave?')
-
     elif option == '2':
         exit(1)
     else:
@@ -23,7 +22,8 @@ def choice0(option):
         choice0
 
 
-def choice1(option):
+def choice1():
+    option0 = input('input your choice: \n >')
     if option == '1':
         print('Ignoring the fact this is the setup to a bad horror movie, you approach the house. \n')
         print('You are soaked to the bone by the time you reach the front door.\n' +
@@ -42,6 +42,7 @@ def choice1(option):
               '3) try and break down the front door \n')
     else:
         print('invalid input; try again.')
+
         choice1(option)
 
 
@@ -49,20 +50,14 @@ def choice1(option):
 
 menu()
 
-option0 = input('input your choice: \n >')
 option1 = input('input your choice: \n >')
-option2 = input('input your choice: \n >')
 
-while x == True:
-    choice0(option0)
-    option1
-    x = False
+choice0(option1)
 
-
-Choice1(option1)
+choice1()
 option2
 
-
+option2 = input('input your choice: \n >')
 
 
 
