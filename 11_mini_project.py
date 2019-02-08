@@ -1,4 +1,5 @@
 # Haunted House Text Game
+# afsd;kahg;kjan;naw'[fna;ifb;iaegb;ikagn;kjabgv
 
 import os
 x = True
